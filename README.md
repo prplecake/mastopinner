@@ -27,9 +27,9 @@ tracker.
 Support and other discussions can be had on the
 [~mjorgensen/mastopinner-discuss@lists.sr.ht][3] mailing list.
 
-[1]:https://lists.sr.ht/~mjorgenen/mastopinner-devel
+[1]:https://lists.sr.ht/~mjorgensen/mastopinner-devel
 [2]:https://todo.sr.ht/~mjorgensen/mastopinner
-[3]:https://lists.sr.ht/~mjorgenen/mastopinner-discuss
+[3]:https://lists.sr.ht/~mjorgensen/mastopinner-discuss
 
 ## License
 
