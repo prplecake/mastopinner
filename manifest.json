@@ -1,0 +1,33 @@
+{
+	"manifest_version": 2,
+	"name": "MastoPinner",
+	"version": "0",
+	"description": "",
+	"homepage_url": "https://sr.ht/~mjorgensen/mastopinner-firefox",
+	"applications": {
+		"gecko": {
+			"id": "mastopinner@jrgnsn.net",
+			"strict_min_version": "57.0"
+		}
+	},
+	"permissions": [
+		"tabs",
+		"<all_urls>",
+		"storage"
+	],
+	"content_scripts": [
+		{
+			"matches": [ "https://*/*" ],
+			"js": [ "js/bootstrap.js" ],
+			"run_at": "document_end",
+			"all_frames": false
+		}
+	],
+	"background": {
+		"scripts": [
+			"js/lib/promisified_chrome.js",
+			"js/background.js"
+		]
+	}
+
+}
