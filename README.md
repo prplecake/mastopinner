@@ -12,10 +12,22 @@ At this time this is very much still a work in progress.
 
 	make run
 
-This will create a temporary profile and target [Firefox Developer Edition][firefox-devedition].
+This will create a temporary profile and target [Firefox Developer Edition][0].
 
-[firefox-devedition]: https://www.mozilla.org/en-US/firefox/developer/
+[0]: https://www.mozilla.org/en-US/firefox/developer/
+
+## Resources
+
+Discussion and patches are welcome to the
+[~mjorgensen/mastopinner-dev@lists.sr.ht][1] mailing list.
+
+Bugs, issues, and other tickets are all at the [~mjorgensen/mastopinner][2]
+tracker.
+
+[1]:mailto:~mjorgensen/mastopinner-dev@list.sr.ht
+[2]:https://todo.sr.ht/~mjorgensen/mastopinner
 
 ## License
 
-This extension is licensed under the terms of the AGPL v3 license. (See LICENSE)
+This extension is licensed under the terms of the AGPL v3 license.
+(See LICENSE)
