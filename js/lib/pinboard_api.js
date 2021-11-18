@@ -41,6 +41,6 @@ class PinboardApi {
             }
             data = JSON.parse(xhr.responseText);
             return data;
-        }
+        };
     }
 }

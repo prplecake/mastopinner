@@ -17,7 +17,7 @@ class MastoPinnerUI {
         </button>`;
 
         // insert the node
-        let b = this.actionBar.querySelector('button#mastopinner-button')
+        let b = this.actionBar.querySelector('button#mastopinner-button');
         if (b == null) {
             this.actionBar.insertAdjacentHTML(
                 'beforeend',
@@ -50,7 +50,7 @@ class MastoPinnerUI {
             url: this.status.url,
             actor: this.status.actor,
             description: this.status.content
-        }
+        };
         this.actions.send(status);
     }
 
