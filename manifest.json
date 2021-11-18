@@ -1,9 +1,9 @@
 {
 	"manifest_version": 2,
 	"name": "MastoPinner",
-	"version": "0",
+	"version": "1.0.0",
 	"description": "",
-	"homepage_url": "https://sr.ht/~mjorgensen/mastopinner-firefox",
+	"homepage_url": "https://sr.ht/~mjorgensen/mastopinner",
 	"applications": {
 		"gecko": {
 			"id": "mastopinner@jrgnsn.net",
@@ -32,5 +32,4 @@
 		],
 		"persistent": true
 	}
-
 }
