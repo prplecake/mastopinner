@@ -47,7 +47,7 @@ class MastoPinnerUI {
         console.debug(this.status);
         this.status.url = this.status.querySelector('a.status__relative-time').href;
         this.status.actor = this.status.querySelector('span.display-name__account').textContent;
-        this.status.content = this.status.querySelector('div.status__content__text').querySelector('p').innerHTML;
+        this.status.content = this.status.querySelector('div.status__content__text').innerText;
         console.log(this.status.url);
         console.log(this.status.actor);
         console.log(this.status.content);
