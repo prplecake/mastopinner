@@ -12,8 +12,8 @@
 	},
 	"permissions": [
 		"tabs",
-		"<all_urls>",
-		"storage"
+		"storage",
+		"https://*/*"
 	],
 	"content_scripts": [
 		{
@@ -26,8 +26,11 @@
 	"background": {
 		"scripts": [
 			"js/lib/promisified_chrome.js",
+			"js/lib/pinboard_credentials.js",
+			"js/lib/pinboard_api.js",
 			"js/background.js"
-		]
+		],
+		"persistent": true
 	}
 
 }

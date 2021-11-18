@@ -2,6 +2,8 @@ const STATUS_SELECTOR = '.item-list .status';
 
 class MastoPinner {
     constructor() {
+        this.pinboardClient = new PinboardClient();
+        this.store = new MastoPinnerStore();
         this.mastoPinnerUIs = [];
     }
 
@@ -36,17 +38,52 @@ class MastoPinner {
         }
 
         this.mastoPinnerUIs = Array.from(statuses).map(status => {
-            console.log(status.classList);
+            //console.log(status.classList);
             return new MastoPinnerUI(status, {
                 send: this.pinStatusAction.bind(this)
             });
         });
+
+        let api_token = await this.pinboardClient.getPinboardCredentials();
+        if (api_token) {
+            this.store.transitionToSignedIn(api_token);
+        }
     }
 
     // Actions
 
-    pinStatusAction(status) {
-        let hasCredentials = !!this.store.state;
+    async pinStatusAction(status) {
+        console.debug(`sending status to Pinboard...`)
+        console.debug(status)
+        try {
+            let hasCredentials = !!this.store.state.api_token;
+            console.log(`hasCredentials: ${hasCredentials}`)
+            console.log(`this.state: ${this.store.state.api_token}`);
+            if (!hasCredentials) {
+                let api_token = await this.pinboardClient.authenticate();
+
+                this.store.transitionToSignedIn(api_token);
+            }
+
+            await this.pinboardClient.createBookmark(status);
+        } catch (error) {
+            console.error(`error saving bookmark: ${error}`);
+        }
+
+    }
+}
+
+class MastoPinnerStore {
+    constructor() {
+        this.state = {
+            api_token: null,
+            error_message: null
+        }
+    }
+
+    transitionToSignedIn(api_token) {
+        this.state.api_token = api_token;
+        this.state.error_message = null;
     }
 }
 

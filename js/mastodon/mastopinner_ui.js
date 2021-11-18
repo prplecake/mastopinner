@@ -10,8 +10,8 @@ class MastoPinnerUI {
 
         // define node to insert
         let nodeHtml = `<button id="mastopinner-button"
-            aria-label="Favourite" aria-pressed="false"
-            title="Favourite" class="status__action-bar-button thumb-tack-icon icon-button"
+            aria-label="Save to Pinboard"
+            title="Save to Pinboard" class="status__action-bar-button thumb-tack-icon icon-button"
             tabindex="0">
             <i role="img" class="fa fa-thumb-tack fa-fw" aria-hidden="true"></i>
         </button>`;
@@ -32,7 +32,7 @@ class MastoPinnerUI {
         }
 
         // add event listener
-        console.log(this.status.classList.contains('mastopinner-rendered'))
+        //console.log(this.status.classList.contains('mastopinner-rendered'));
         if (!this.status.classList.contains('mastopinner-rendered')) {
             this.actionBar.querySelector('#mastopinner-button').addEventListener('click', this._mastoPinnerButtonClicked.bind(this));
         }
@@ -43,18 +43,13 @@ class MastoPinnerUI {
     // Events
 
     _mastoPinnerButtonClicked(e) {
-        console.debug('MastoPinner: link clicked');
-        console.debug(this.status);
         this.status.url = this.status.querySelector('a.status__relative-time').href;
         this.status.actor = this.status.querySelector('span.display-name__account').textContent;
         this.status.content = this.status.querySelector('div.status__content__text').innerText;
-        console.log(this.status.url);
-        console.log(this.status.actor);
-        console.log(this.status.content);
         let status = {
             url: this.status.url,
             actor: this.status.actor,
-            content: this.status.content
+            description: this.status.content
         }
         this.actions.send(status);
     }

@@ -12,6 +12,7 @@ class PinboardCredentials {
     static async load() {
         let results = await chromeStorageLocalGet(['api_token']);
         let hasToken = results.api_token;
+
         if (hasToken) {
             return new PinboardCredentials(results);
         } else {
