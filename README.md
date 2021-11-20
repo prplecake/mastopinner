@@ -1,20 +1,21 @@
 # MastoPinner
 
-Adds a button to the Mastodon web UI to pin a status to your pinboard account.
+This extension adds a thumb-tack button to the Mastodon web UI
+allowing you to easily save a status to your pinboard account.
+
 At this time this is very much still a work in progress.
 
-## Building
+Right now the extension saves the status text as the bookmark title,
+trimming to the length limit, if necessary. If there's more, the status
+will be saved in the description.
 
-1. Clone the repository
-2. `make all`
+This is currently only tested with the "simple" web interface.
 
-## Live reloading
+## Known Issues
 
-	make run
-
-This will create a temporary profile and target [Firefox Developer Edition][0].
-
-[0]: https://www.mozilla.org/en-US/firefox/developer/
+* Extension continues to ask for Pinboard API token, or just doesn't
+work, until the webpage is refreshed.
+* Thumb-tack icon doesn't know up on single post views
 
 ## Resources
 
@@ -30,6 +31,21 @@ Support and other discussions can be had on the
 [1]:https://lists.sr.ht/~mjorgensen/mastopinner-devel
 [2]:https://todo.sr.ht/~mjorgensen/mastopinner
 [3]:https://lists.sr.ht/~mjorgensen/mastopinner-discuss
+
+## Contributing
+
+### Building
+
+1. Clone the repository
+2. `make all`
+
+### Live reloading
+
+	make run
+
+This will create a temporary profile and target [Firefox Developer Edition][0].
+
+[0]: https://www.mozilla.org/en-US/firefox/developer/
 
 ## License
 
