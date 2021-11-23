@@ -11,6 +11,10 @@ will be saved in the description.
 
 This is currently only tested with the "simple" web interface.
 
+Get the extension for [Firefox][amo].
+
+[amo]:https://addons.mozilla.org/en-US/firefox/addon/mastopinner/
+
 ## Known Issues
 
 * Extension continues to ask for Pinboard API token, or just doesn't
