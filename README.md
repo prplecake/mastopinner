@@ -1,3 +1,5 @@
+![Mozilla Add-on](https://img.shields.io/amo/users/mastopinner?style=flat-square)
+
 # MastoPinner
 
 This extension adds a thumb-tack button to the Mastodon web UI
