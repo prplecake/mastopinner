@@ -7,10 +7,17 @@ install:
 	command -v web-ext >/dev/null 2>&1 || npm install --global web-ext
 	command -v eslint >/dev/null 2>&1 || npm install --global eslint
 
-browser_opts = --firefox=$(FIREFOX_VERSION) --firefox-profile=web-ext --profile-create-if-missing
 watch_ignored = --watch-ignored *.md
-run:
-	web-ext run --browser-console $(browser_opts) $(watch_ignored)
+
+browser_opts_ff = --firefox=$(FIREFOX_VERSION) --firefox-profile=web-ext --profile-create-if-missing
+
+run-firefox:
+	web-ext run --browser-console $(browser_opts_ff) $(watch_ignored)
+
+browser_opts_chrome = --target=chromium
+
+run-chrome:
+	web-ext run --browser-console $(browser_opts_chrome) $(watch_ignored)
 
 build:
 	web-ext build --overwrite-dest --ignore-files="assets/"
