@@ -24,7 +24,7 @@ class PinboardApi {
             descriptionTrimmed = true;
         }
         if (descriptionTrimmed) {
-            extended = params.description;
+            extended = `<blockquote>${params.description}</blockquote>`;
             params.description = trimmedDescription;
         }
 
