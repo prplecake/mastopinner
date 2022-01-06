@@ -23,21 +23,6 @@ Get the extension for [Firefox][amo].
 work, until the webpage is refreshed.
 * Thumb-tack icon doesn't know up on single post views
 
-## Resources
-
-Discussion and patches are welcome to the
-[~mjorgensen/mastopinner-devel@lists.sr.ht][1] mailing list.
-
-Bugs, issues, and other tickets are all at the [~mjorgensen/mastopinner][2]
-tracker.
-
-Support and other discussions can be had on the
-[~mjorgensen/mastopinner-discuss@lists.sr.ht][3] mailing list.
-
-[1]:https://lists.sr.ht/~mjorgensen/mastopinner-devel
-[2]:https://todo.sr.ht/~mjorgensen/mastopinner
-[3]:https://lists.sr.ht/~mjorgensen/mastopinner-discuss
-
 ## Contributing
 
 ### Building
