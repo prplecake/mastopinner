@@ -1,4 +1,4 @@
-![Mozilla Add-on](https://img.shields.io/amo/users/mastopinner?style=flat-square)
+[![Mozilla Add-on](https://img.shields.io/amo/users/mastopinner?style=flat-square)](https://addons.mozilla.org/en-US/firefox/addon/mastopinner/)
 
 # MastoPinner
 
