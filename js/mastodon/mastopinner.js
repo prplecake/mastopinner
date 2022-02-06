@@ -22,7 +22,6 @@ class MastoPinner {
             this._inject();
         }
 
-        // set up mutation observer to detect when dropdown-menu appears
         let uiContainer = mastodonApp.querySelector('div.ui');
         let observer = new MutationObserver((/* mutations */) => {
             this._inject();
