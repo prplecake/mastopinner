@@ -1,9 +1,9 @@
 {
 	"manifest_version": 2,
 	"name": "MastoPinner",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "",
-	"homepage_url": "https://sr.ht/~mjorgensen/mastopinner",
+	"homepage_url": "https://github.com/prplecake/mastopinner",
 	"applications": {
 		"gecko": {
 			"id": "mastopinner@jrgnsn.net",
