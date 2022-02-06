@@ -38,10 +38,12 @@ class MastoPinner {
         }
 
         this.mastoPinnerUIs = Array.from(statuses).map(status => {
-            //console.log(status.classList);
-            return new MastoPinnerUI(status, {
-                send: this.pinStatusAction.bind(this)
-            });
+            //console.log("classList: " + status.classList);
+            if(!status.classList.contains('status-direct')){
+                return new MastoPinnerUI(status, {
+                    send: this.pinStatusAction.bind(this)
+                });
+            }
         });
 
         let api_token = await this.pinboardClient.getPinboardCredentials();
