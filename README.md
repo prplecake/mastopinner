@@ -17,9 +17,9 @@ Get the extension for [Firefox][amo].
 
 ## Known Issues
 
-* Thumb-tack icon doesn't know up on single post views (#7)
-* Fails to save posts that just conatin an image (#10)
-* New lines don't translate to spaces in bookmark title (#13)
+* Thumb-tack icon doesn't know up on single post views ([#7](https://github.com/prplecake/mastopinner/issues/7))
+* Fails to save posts that just conatin an image ([#10](https://github.com/prplecake/mastopinner/issues/10))
+* New lines don't translate to spaces in bookmark title ([#13](https://github.com/prplecake/mastopinner/issues/13))
 
 [See more](https://github.com/prplecake/mastopinner/issues)
 
