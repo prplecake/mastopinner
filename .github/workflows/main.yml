@@ -19,8 +19,8 @@ jobs:
         with:
           note-version: 17
       
-      - name: "Install web-ext"
-        run: npm install --global web-ext
+      - name: "Install eslint and web-ext"
+        run: npm install --global eslint web-ext
       
       - name: "Test and Lint"
         run: make test
