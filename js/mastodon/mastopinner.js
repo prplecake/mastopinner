@@ -1,4 +1,7 @@
-const STATUS_SELECTOR = '.item-list .status';
+const STATUS_SELECTORS = [
+    '.item-list .status',
+    '.scrollable .status'
+];
 
 class MastoPinner {
     constructor() {
@@ -17,7 +20,12 @@ class MastoPinner {
         }
 
         // inject the initially visible statuses
-        let statuses = document.querySelectorAll(STATUS_SELECTOR);
+        let statuses = [];
+        STATUS_SELECTORS.forEach((selector) => {
+            document.querySelectorAll(selector).forEach((s) => {
+                statuses.push(s);
+            });
+        });
         if (statuses.length > 0) {
             this._inject();
         }
@@ -30,7 +38,12 @@ class MastoPinner {
     }
 
     async _inject() {
-        let statuses = document.querySelectorAll(STATUS_SELECTOR);
+        let statuses = [];
+        STATUS_SELECTORS.forEach((selector) => {
+            document.querySelectorAll(selector).forEach((s) => {
+                statuses.push(s);
+            });
+        });
         if (statuses.length == 0) {
             console.warn(`MastoPinner: couldn't inject the UI: no statuses found.`);
             return;

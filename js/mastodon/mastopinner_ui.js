@@ -1,3 +1,7 @@
+const ACTION_BAR_SELECTORS = [
+    'div.status__action-bar'
+];
+
 class MastoPinnerUI {
     constructor(status, { send }) {
         this.status = status;
@@ -6,7 +10,7 @@ class MastoPinnerUI {
     }
 
     render() {
-        this.actionBar = this.status.querySelector('div.status__action-bar');
+        this.actionBar = this.status.querySelector(ACTION_BAR_SELECTORS);
 
         // define node to insert
         let nodeHtml = `<button id="mastopinner-button"
