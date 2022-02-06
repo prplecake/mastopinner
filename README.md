@@ -11,17 +11,17 @@ Right now the extension saves the status text as the bookmark title,
 trimming to the length limit, if necessary. If there's more, the status
 will be saved in the description.
 
-This is currently only tested with the "simple" web interface.
-
 Get the extension for [Firefox][amo].
 
 [amo]:https://addons.mozilla.org/en-US/firefox/addon/mastopinner/
 
 ## Known Issues
 
-* Extension continues to ask for Pinboard API token, or just doesn't
-work, until the webpage is refreshed.
-* Thumb-tack icon doesn't know up on single post views
+* Thumb-tack icon doesn't know up on single post views (#7)
+* Fails to save posts that just conatin an image (#10)
+* New lines don't translate to spaces in bookmark title (#13)
+
+[See more](https://github.com/prplecake/mastopinner/issues)
 
 ## Contributing
 
@@ -32,9 +32,19 @@ work, until the webpage is refreshed.
 
 ### Live reloading
 
-	make run
+Using Firefox Developer Edition:
+
+```text
+make run-firefox
+```
 
 This will create a temporary profile and target [Firefox Developer Edition][0].
+
+Using Chrome:
+
+```text
+make run-chrome
+```
 
 [0]: https://www.mozilla.org/en-US/firefox/developer/
 
