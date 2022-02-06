@@ -33,7 +33,7 @@ class MastoPinner {
     async _inject() {
         let statuses = document.querySelectorAll(STATUS_SELECTOR);
         if (statuses.length == 0) {
-            console.warning(`MastoPinner: couldn't inject the UI: no statuses found.`);
+            console.warn(`MastoPinner: couldn't inject the UI: no statuses found.`);
             return;
         }
 
