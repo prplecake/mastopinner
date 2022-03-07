@@ -16,7 +16,7 @@ class PinboardApi {
         let descriptionTrimmed = false;
 
         var extended = params.extended || "",
-            tags = params.actor || "",
+            tags = "via:" + params.actor || "",
             tags = tags + " via:MastoPinner";
         
         if (params.description.length > PINBOARD_DESC_MAX_LENGTH) {
