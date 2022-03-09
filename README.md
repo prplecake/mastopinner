@@ -1,4 +1,6 @@
-[![Mozilla Add-on](https://img.shields.io/amo/users/mastopinner?style=flat-square)](https://addons.mozilla.org/en-US/firefox/addon/mastopinner/)
+[![GitHub CI](https://github.com/prplecake/mastopinner/actions/workflows/main.yml/badge.svg)](https://github.com/prplecake/mastopinner/actions/workflows/main.yml)
+[![Mozilla Add-on](https://img.shields.io/amo/users/mastopinner)](https://addons.mozilla.org/en-US/firefox/addon/mastopinner/)
+[![CodeFactor](https://www.codefactor.io/repository/github/prplecake/mastopinner/badge)](https://www.codefactor.io/repository/github/prplecake/mastopinner)
 
 # MastoPinner
 
