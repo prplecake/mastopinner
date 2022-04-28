@@ -28,7 +28,7 @@ class PinboardApi {
             params.description = trimmedDescription;
         }
 
-        let queryString = `?description=${params.description}&url=${params.url}&extended=${extended}&tags=${tags}&format=json&auth_token=${this.credentials.api_token}`;
+        let queryString = `?auth_token=${this.credentials.api_token}&extended=${extended}&tags=${tags}&format=json&description=${params.description}&url=${params.url}`;
         console.log(queryString);
 
         let xhr = new XMLHttpRequest();
