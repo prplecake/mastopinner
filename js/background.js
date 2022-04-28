@@ -38,6 +38,8 @@ async function setPinboardCredentials(request, sender, sendResponse) {
 
 		await (credentials.save());
 
+		pinboardApi.setCredentials(credentials);
+
 		sendResponse({ success: true, errorMsg: null });
 	} catch (error) {
 		sendResponse({ success: false, errorMsg: error.message });
