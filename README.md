@@ -17,6 +17,9 @@ Get the extension for [Firefox][amo].
 
 [amo]:https://addons.mozilla.org/en-US/firefox/addon/mastopinner/
 
+* **Works in the vanilla web UI**
+* **Works in the glitch-soc web UI**
+
 ## Known Issues
 
 * Thumb-tack icon doesn't know up on single post views ([#7](https://github.com/prplecake/mastopinner/issues/7))
