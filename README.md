@@ -7,8 +7,6 @@
 This extension adds a thumb-tack button to the Mastodon web UI
 allowing you to easily save a status to your pinboard account.
 
-At this time this is very much still a work in progress.
-
 Right now the extension saves the status text as the bookmark title,
 trimming to the length limit, if necessary. If there's more, the status
 will be saved in the description.
@@ -33,7 +31,7 @@ Get the extension for [Firefox][amo].
 ### Building
 
 1. Clone the repository
-2. `make all`
+2. `cd mastopinner && make`
 
 ### Live reloading
 
