@@ -1,6 +1,7 @@
 default: all;
 
 FIREFOX_VERSION = firefoxdeveloperedition
+SRC_DIR=src
 
 install:
 	command -v npm >/dev/null 2>&1 || { echo >&2 "node and npm must be installed first. Aborting."; exit 1; }
@@ -12,19 +13,19 @@ watch_ignored = --watch-ignored *.md
 browser_opts_ff = --firefox=$(FIREFOX_VERSION) --firefox-profile=web-ext --profile-create-if-missing
 
 run-firefox:
-	web-ext run --browser-console $(browser_opts_ff) $(watch_ignored)
+	web-ext run --source-dir=$(SRC_DIR) --browser-console $(browser_opts_ff) $(watch_ignored)
 
 browser_opts_chrome = --target=chromium
 
 run-chrome:
-	web-ext run --browser-console $(browser_opts_chrome) $(watch_ignored)
+	web-ext run --source-dir=$(SRC_DIR) --browser-console $(browser_opts_chrome) $(watch_ignored)
 
 build:
-	web-ext build --overwrite-dest --ignore-files="assets/"
+	web-ext build --source-dir=$(SRC_DIR) --overwrite-dest --ignore-files="assets/"
 
 test:
-	eslint js/
-	web-ext lint # --ignore-files
+	eslint src/js/
+	web-ext lint --source-dir=$(SRC_DIR) # --ignore-files
 
 clean:
 	rm web-ext-artifacts/*.zip
