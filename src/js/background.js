@@ -3,7 +3,6 @@ let pinboardApi = new PinboardApi();
 async function injectContentScripts(request, sender) {
 	try {
 		let tabId = sender.tab.id;
-		console.log(tabId);
 
 		await Promise.all([
 			// chromeTabsExecuteScript(tabId, { file: "js/mastodon/client.js", runAt: 'document_end'}),
