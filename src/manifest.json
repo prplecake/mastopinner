@@ -18,6 +18,9 @@
 		"storage",
 		"https://*/*"
 	],
+	"optional_permissions": [
+		"notifications"
+	],
 	"content_scripts": [
 		{
 			"matches": [ "https://*/*" ],

@@ -50,6 +50,11 @@ function sendPinboardApiRequest(request, sender, sendResponse) {
 	pinboardApi.sendRequest(request.path, request.method, request.params)
 		.then(responseText => sendResponse({ responseText: responseText, errorMsg: null }))
 		.catch(error => sendResponse({ responseText: null, errorMsg: error.message }));
+	browser.notifications.create('mastopinner-notification', {
+		"type": "basic",
+		"title": "MastoPinner",
+		"message": "Post saved to Pinboard.",
+	});
 }
 
 // Initialize the listener for messages sent by the content scripts
