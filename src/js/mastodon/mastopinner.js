@@ -72,7 +72,6 @@ class MastoPinner {
         try {
             let hasCredentials = !!this.store.state.api_token;
             console.log(`hasCredentials: ${hasCredentials}`);
-            console.log(`this.state: ${this.store.state.api_token}`);
             if (!hasCredentials) {
                 let api_token = await this.pinboardClient.authenticate();
 
