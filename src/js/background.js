@@ -68,7 +68,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 		sendPinboardApiRequest(request, sender, sendResponse);
 		waitForSendResponse = true;
 	} else {
-		console.warning(`Unhandled message (${JSON.stringify(requesT)})`);
+		console.warning(`Unhandled message (${JSON.stringify(request)})`);
 	}
 
 	return waitForSendResponse;
