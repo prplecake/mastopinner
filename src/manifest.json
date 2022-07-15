@@ -14,8 +14,8 @@
 		"page": "options.html"
 	},
 	"permissions": [
-		"tabs",
 		"storage",
+		"tabs",
 		"https://*/*"
 	],
 	"content_scripts": [
