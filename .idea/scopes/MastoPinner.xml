@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="MastoPinner" pattern="file[mastopinner]:*/&amp;&amp;!file[mastopinner]:web-ext-artifacts//*&amp;&amp;!file[mastopinner]:.idea//*&amp;&amp;!file[mastopinner]:.vscode//*" />
+</component>
