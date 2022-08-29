@@ -46,7 +46,7 @@ class MastoPinnerUI {
 
     // Events
 
-    _mastoPinnerButtonClicked(e) {
+    _mastoPinnerButtonClicked() {
         this.status.url = this.status.querySelector('a.status__relative-time').href;
         this.status.actor = this.status.querySelector('span.display-name__account').textContent;
         this.status.content = this.status.querySelector('div.status__content__text').innerText;

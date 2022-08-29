@@ -7,7 +7,6 @@ class MastoPinner {
     constructor() {
         this.pinboardClient = new PinboardClient();
         this.store = new MastoPinnerStore();
-        this.mastoPinnerUIs = [];
     }
 
     initialize() {
@@ -44,7 +43,7 @@ class MastoPinner {
                 statuses.push(s);
             });
         });
-        if (statuses.length == 0) {
+        if (statuses.length === 0) {
             console.warn(`MastoPinner: couldn't inject the UI: no statuses found.`);
             return;
         }

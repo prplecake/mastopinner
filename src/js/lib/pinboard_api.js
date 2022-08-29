@@ -11,16 +11,16 @@ class PinboardApi {
     }
 
     async sendRequest(path, method = 'GET', params = {}) {
-        let baseUrl = PINBOARD_API_URL;
-        let url = baseUrl + path;
+        let url = PINBOARD_API_URL + path;
         let descriptionTrimmed = false;
+        let trimmedDescription;
 
-        var extended = params.extended || "",
-            tags = "via:" + params.actor || "",
-            tags = tags + " via:MastoPinner";
+        let extended = params.extended || "",
+            tags = "via:" + params.actor || "";
+        tags += " via:MastoPinner";
         
         if (params.description.length > PINBOARD_DESC_MAX_LENGTH) {
-            var trimmedDescription = params.description.slice(0, PINBOARD_DESC_MAX_LENGTH) + '...';
+            trimmedDescription = params.description.slice(0, PINBOARD_DESC_MAX_LENGTH) + '...';
             descriptionTrimmed = true;
         }
         if (descriptionTrimmed) {
@@ -34,13 +34,11 @@ class PinboardApi {
         let xhr = new XMLHttpRequest();
         xhr.open(method, url + queryString);
         xhr.send();
-        var data;
         xhr.onload = function () {
-            if (xhr.status != 200) {
+            if (xhr.status !== 200) {
                 throw new Error(`Error ${xhr.status}: ${xhr.statusText}`);
             }
-            data = JSON.parse(xhr.responseText);
-            return data;
+            return JSON.parse(xhr.responseText);
         };
     }
 }

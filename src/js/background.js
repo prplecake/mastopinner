@@ -60,15 +60,15 @@ function sendPinboardApiRequest(request, sender, sendResponse) {
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 	let waitForSendResponse = false;
 
-	if (request.type == 'inject_content_scripts') {
+	if (request.type === 'inject_content_scripts') {
 		injectContentScripts(request, sender);
 
-	} else if (request.type == 'set_pinboard_credentials') {
+	} else if (request.type === 'set_pinboard_credentials') {
 		setPinboardCredentials(request, sender, sendResponse);
 		waitForSendResponse = true;
-	} else if (request.type == 'get_pinboard_credentials') {
+	} else if (request.type === 'get_pinboard_credentials') {
 		getPinboardCredentials(request, sender, sendResponse);
-	} else if (request.type == 'send_pinboard_api_request') {
+	} else if (request.type === 'send_pinboard_api_request') {
 		sendPinboardApiRequest(request, sender, sendResponse);
 		waitForSendResponse = true;
 	} else {
